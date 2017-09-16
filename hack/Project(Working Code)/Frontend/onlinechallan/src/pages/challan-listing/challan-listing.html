@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Challan Listing
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding #content>
+    
+        
+  <ion-card-header>
+    Below Details
+  </ion-card-header>
+    
+    <ion-card>
+      <ion-card-header>
+        Name
+      </ion-card-header>
+      <ion-card-content>
+        Manjeet Singh
+      </ion-card-content>
+    
+      <ion-card-header>
+        Father's Name
+      </ion-card-header>
+      <ion-card-content>
+        Manjeet Singh
+      </ion-card-content>
+        
+      <ion-card-header>
+        Email ID
+      </ion-card-header>
+      <ion-card-content>
+        manjeetsingh@ms.com
+      </ion-card-content>
+        
+      <ion-card-header>
+        Address
+      </ion-card-header>
+      <ion-card-content>
+        Multiline text that should wrap when it is too long to fit on one line in the item.
+      </ion-card-content>
+        
+      <ion-card-header>
+        Challan Amount
+      </ion-card-header>
+      <ion-card-content>
+        $999999
+      </ion-card-content>
+        
+      <ion-card-header>
+        Evidence
+      </ion-card-header>
+      <ion-card-content>
+        <a href="#">http://youtube.com/watch/anything</a>
+      </ion-card-content>
+    </ion-card>
+    
+    <div class="desktopview pull-left">
+        <p class="marginT20">
+            <ion-item  class="item-text-wrap noPadding">
+              <ion-label>I Accept the agreement.</ion-label>
+              <ion-checkbox [(ngModel)]="acceptChallan"></ion-checkbox>
+            </ion-item>
+        </p>
+        <p class="marginT20"><button color="primary" ion-button block [disabled]="!acceptChallan">Pay Now</button></p>
+    </div>
+    
+</ion-content>

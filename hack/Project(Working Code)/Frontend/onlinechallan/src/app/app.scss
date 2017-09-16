@@ -1,0 +1,93 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+.ms-app {
+    .item-text-wrap ion-label { white-space: normal; }    
+    .segment-ios .segment-button, .segment-ios .segment-button:hover:not(.segment-activated) {border-radius: 4px; border: 1px solid #010080; color: #010080; background-color: transparent;} 
+    .segment-md .segment-button {color: #010080; border-color: #010080; opacity: 1; }
+    ion-menu[type=reveal].show-menu {z-index: 80; }
+    ion-menu[type=reveal].show-menu .show-backdrop { display: block; opacity: 0.35; background-color: #000; }
+    
+    ion-header .toolbar-background { background: #bd1009; }
+    ion-header .toolbar-title, ion-header .bar-button { color: #fff; }
+    
+    .button-ios-primary, .button-md-primary, .button-wp-primary { background-color: #010080; }
+    .button-ios-danger, .button-md-danger, .button-wp-danger { background-color: #bd1009; }
+    
+    .button-ios-secondary, .button-md-secondary, .button-wp-secondary { background-color: #008000; border-radius: 4px; }
+    
+    .challanForm .item-md, .challanForm .item-ios { padding-right: 16px; }
+    
+    ion-input[disabled], ion-textarea[disabled] { background: #eee; padding-left: 16px; }
+    .text-input[disabled] { cursor: not-allowed; }
+    
+    ion-card-content { border-bottom: 1px solid #eee; }
+    ion-card { box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) }
+    
+    .marginT10 { margin-top: 10px; } 
+    .marginT20 { margin-top: 20px; } 
+    .marginT40 { margin-top: 40px; } 
+    .marginB10 { margin-bottom: 10px; } 
+    .marginB20 { margin-bottom: 20px; } 
+    .marginB40 { margin-bottom: 40px; } 
+    .noPadding { padding: 0; }
+    .paddLeft16 { padding-left: 16px; } 
+    .paddRight16 { padding-right: 16px; } 
+    .paddTop16 { padding-top: 16px; } 
+    .paddBottom16 { padding-bottom: 16px; } 
+    .hidden, .hide, hide { display: none !important; }
+    
+
+}
+
+@media all and (min-width:769px) {
+    
+    .hidden-desktop { display: none !important; }
+    
+    body { overflow: auto; position: relative; height: auto; max-height: none; }
+    ion-nav, ion-tab, ion-tabs { overflow: auto; position: static !important }
+    ion-app, .app-root { position: static !important; }
+    .scroll-content { position: relative; overflow: auto; }
+
+    ion-content, ion-navbar.toolbar { max-width: 1366px; position: relative !important; margin: 0 auto; height: auto; }
+    ion-header { background: #bd1009; }
+        
+    ion-navbar.toolbar { padding-top: 14px; }
+    ion-title { float: left; }
+    .ionav { float: right; padding-top: 50px; }
+    .ionav a { display: inline-block; color: #fff; margin: 0 20px; text-decoration: none; font-size: 19px; padding-right: 35px; border-right: 2px solid #fff; }
+    .ionav a:hover { color: #fff; text-decoration: underline;opacity: 1; }
+    .ionav a:nth-last-child(1) { margin-right: 0; padding-right: 0; border-right: 0; }
+    .enable-hover a:hover { opacity: 1; }
+    
+    .desktopview { width: 600px; margin: 0 auto; }
+    
+    .ion-page { position: absolute !important; }
+    .pull-left { float: left;}
+    .pull-right { float: right;}
+    ion-alert { position: fixed; }
+    ion-footer { position: static; }
+    .toast-wrapper { position: fixed !important; }
+    
+    
+}
+@media all and (max-width:768px) {
+    
+    .visible-desktop { display: none !important; }
+    
+}

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Paymant
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding #content>
+    <h5>Fill Required Details</h5>
+    <form class="challanForm" #formCtrl="ngForm">
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Enter Challan No.</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="challan" name="challan" (change)="updateItem('aadhar')" required></ion-input>
+          </ion-item>
+          <p class="paddLeft16 paddRight16 paddTop16">Or</p>
+          <ion-item>
+            <ion-label floating>Enter Aadhar No.</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="aadhar" name="aadhar" (change)="updateItem('challan')" required></ion-input>
+          </ion-item>
+        </ion-list>
+        <div padding>
+          <button ion-button color="primary" block (click)="goToChallanListing()">Show Details</button>
+            <!-- [disabled]="!formCtrl.form.valid"-->
+        </div>
+    </form>
+    
+</ion-content>

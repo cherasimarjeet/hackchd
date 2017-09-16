@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title class="hidden-desktop">
+      Dashboard
+    </ion-title>
+    <ion-title class="visible-desktop">
+       <a href="#"><img src="../../assets/icon/logo-desk.jpg" alt=""/></a>
+    </ion-title>
+    <ion-list class="ionav visible-desktop"><a href="#">Home</a><a href="#">Dashboard</a><a href="#">About</a><a href="#">Contact Us</a></ion-list>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h2>Welcome {{username}}!</h2>
+    
+    <p class="paddingLeft20"></p>
+  
+    <ion-list>
+        <ion-item>Highest Challan Scorer: {{highest_scorer}}</ion-item>
+        <ion-item>department_total_year: {{department_total_year}}</ion-item>
+        <ion-item>base_location: {{base_location}}</ion-item>
+        <ion-item>challan_count_total: {{challan_count_total}}</ion-item>
+        <ion-item>challan_count_year: {{challan_count_year}}</ion-item>
+        <ion-item>designation: {{designation}}</ion-item>
+        
+    </ion-list>
+    <div class="desktopview pull-left">
+        <p class="marginT20">
+            <ion-item  class="item-text-wrap noPadding">
+              <ion-label>I Accept the agreement.</ion-label>
+              <ion-checkbox [(ngModel)]="acceptDash"></ion-checkbox>
+            </ion-item>
+        </p>
+        <p class="marginT20"><button color="primary" ion-button block (click)="goToContactPage()" [disabled]="!acceptDash">Issue Challan</button></p>
+    </div>
+</ion-content>

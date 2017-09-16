@@ -1,0 +1,79 @@
+
+
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Navigation</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="goToAboutPage()">
+        About
+      </button>
+      <button ion-item >
+        Signup
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle icon-only class="hidden-desktop">
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title class="hidden-desktop">
+      Online Challan
+    </ion-title>
+    <ion-title class="visible-desktop">
+       <a href="#"><img src="../../assets/icon/logo-desk.jpg" alt=""/></a>
+    </ion-title>
+    <ion-list class="ionav visible-desktop"><a href="#">Home</a><a href="#">Dashboard</a><a href="#">About</a><a href="#">Contact Us</a></ion-list>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="getting-started">    
+    
+    <div padding class="desktopview">
+        <ion-segment class="hidden-desktop">
+          <ion-segment-button value="login">
+            Login
+          </ion-segment-button>
+        </ion-segment>
+        <h2 class="visible-desktop">Login</h2>
+      </div>
+    
+    
+    <div class="desktopview">
+        <form  (submit)="login($event, username.value, password.value)">
+          <ion-item>
+            <ion-label floating>Username</ion-label>
+            <ion-input type="text" #username id="username" ></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password"  #password id="password" ></ion-input>
+          </ion-item>
+
+          <div class="paddLeft16 paddingTop16 marginT40">
+            <button ion-button color="primary" block type="submit">Login</button>
+          </div>
+
+        </form>
+      </div>
+    <div class="marginT40 desktopview"><img src="http://chandigarhpolice.nic.in/images/header.jpg" alt=""/></div>
+    <div class="desktopview marginT40 ">
+        <button ion-button full color="secondary" (click)="goToPaymentPage()">Make Payment</button>
+    </div>
+</ion-content>
+
+<ion-footer class="visible-desktop">
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>

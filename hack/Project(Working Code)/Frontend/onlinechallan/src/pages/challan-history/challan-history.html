@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Challan History
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding #content>
+    
+        
+  <ion-card-header>
+    Below Details
+  </ion-card-header>
+    
+    <ion-card *ngFor="let item of response.challanList" >
+      <ion-card-header>
+        Aadhar No:{{item.aadhar_no}}
+      </ion-card-header>
+      <ion-card-content>
+          Registration No:{{item.reg_no}}
+      </ion-card-content>
+        <ion-card-content>
+          Violator Name:{{item.violatorDetails.username}}
+      </ion-card-content>
+        
+    </ion-card>
+    
+    <!--<div class="desktopview pull-left">
+        <p class="marginT20">
+            <ion-item  class="item-text-wrap noPadding">
+              <ion-label>I Accept the agreement.</ion-label>
+              <ion-checkbox [(ngModel)]="acceptChallan"></ion-checkbox>
+            </ion-item>
+        </p>
+        <p class="marginT20"><button color="primary" ion-button block [disabled]="!acceptChallan">Pay Now</button></p>
+    </div>-->
+    
+</ion-content>
