@@ -16,7 +16,10 @@ While installation it asks for password which I had given as manmohan.
 In addition you would have to create DB : name- STMS, use pgAdmin which comes as part of postgresql intallation.
 
 ```
-#
+### Creating DB in postgres: 
+open SQL shell of postgres, enter password for superuser, and run:
+
+CREATE DATABASE "STMS" WITH OWNER = postgres ENCODING = 'UTF8' CONNECTION LIMIT = -1;
 # [ Database Configuration Section ]
 #
 spring.jpa.database=POSTGRESQL
@@ -55,6 +58,7 @@ to list all application users : ```http://localhost:9095/user```
 ### Add a user
 ```curl -X POST "http://localhost:9095/user"```
 Following JSON content can be sent with request:
+```json
 {
 "username" : "Manmohan",
 "password" : "manmohan",
@@ -64,19 +68,21 @@ Following JSON content can be sent with request:
 "challan_count_month" : "15",
 "challan_count_year": "250"
 }
+```
 running the above POST request will result to an 200 Ok HTTP response and JSON Content-Type of Application/json of the new created object.
 the url must be URL_ENCODED before making the request (notice the %20 which encodes the white space character).
 
 ### To authenticate a user - POST
 ```curl "http://localhost:9095/authentication"```
- 
+```json
 {
 "username" : "Manmohan",
 "password" : "manmohan"
 }
-
+```
 ### To challan a user - POST 
 ```curl "http://localhost:9095/challan"```
+```json
 {
 "aadhar_no": "13245679",
 "driving_license_no":"DL4578",
@@ -97,5 +103,5 @@ the url must be URL_ENCODED before making the request (notice the %20 which enco
 "lattitude":"45",
 "rules_violated":"Drunken driving"
 }
-
+```
 
