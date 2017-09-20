@@ -7,6 +7,14 @@ Postgresql instance
 
 ## Postgres Instance Configuration
 In order to use your instance please update the [ Database Configuration Section ] section in ```src/main/resources/dev/application.properties```
+
+## Setup database:
+Download and install Postgresql from ```curl "https://www.enterprisedb.com/downloads/postgres-postgresql-downloads"```
+Select version as 9.6.5 and appropiate OS version
+While installation it asks for password which I had given as manmohan.
+
+In addition you would have to create DB : name- STMS, use pgAdmin which comes as part of postgresql intallation.
+
 ```
 #
 # [ Database Configuration Section ]
@@ -23,6 +31,8 @@ spring.datasource.password=postgres
 # [ Other Configuration Attributes ]
 #
 ```
+## Download dependencies etc using 
+```mvn clean install -U```
 
 ## Run Application Locally
 ```mvn spring-boot:run```
@@ -87,4 +97,5 @@ the url must be URL_ENCODED before making the request (notice the %20 which enco
 "lattitude":"45",
 "rules_violated":"Drunken driving"
 }
+
 
