@@ -30,6 +30,18 @@ private String username;
 @Column(name = "father_name", nullable = false)
 private String father_name;
 
+@Column(name = "email_id", nullable = false)
+private String email_id;
+
+@Column(name = "address")
+private String address;
+
+@Column(name = "phone_no", nullable = false)
+private String phone_no;
+
+@Column(name = "local_address", nullable = false)
+private String local_address;
+
 public Long getViolatorId() {
 	return violatorId;
 }
@@ -86,16 +98,5 @@ public void setLocal_address(String local_address) {
 	this.local_address = local_address;
 }
 
-@Column(name = "email_id", nullable = false)
-private String email_id;
-
-@Column(name = "address")
-private String address;
-
-@Column(name = "phone_no", nullable = false)
-private String phone_no;
-
-@Column(name = "local_address", nullable = false)
-private String local_address;
 
 }
