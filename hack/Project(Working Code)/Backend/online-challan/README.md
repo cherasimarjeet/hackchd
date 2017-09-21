@@ -39,6 +39,10 @@ schema and data are initialized using ```schema-${platform}.sql``` and ```data-$
 to make POST requests from your browser use tools like : https://chrome.google.com/webstore/detail/rest-console/cokgbflfommojglbmbpenpphppikmonn
 
 
+### through Swagger
+to access all the APIs with help, access the following URL :
+http://localhost:9095/swagger-ui.html
+
 to add a user make a POST like this example : ```http://localhost:9095/user/Yazid Cherfi```
 to list all application users : ```http://localhost:9095/user```
 
